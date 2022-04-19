@@ -50,7 +50,7 @@ export const App: FC = () => {
                     <div className={styles.frame}>
                         <div className={styles.pad}>
                             <WalletMultiButton />
-                            <div>{network}</div>
+                            <div>Only works on Test network</div>
                             <ControlPanel />
                         </div>
                     </div>
