@@ -1,9 +1,8 @@
 import { WalletContextState } from "@solana/wallet-adapter-react";
 import {
   Connection,
-  PublicKey,
 } from "@solana/web3.js"
-import * as borsh from "borsh"
+import { deserialize } from "borsh"
 import { createProgramAccount } from "./createProgramAccount";
 import { GreetingAccount, GreetingSchema, GREETING_PROGRAM_ID } from "./GreetingAccount";
 
@@ -16,7 +15,7 @@ export async function getNumGreetings(wallet: WalletContextState, connection: Co
   if (accountInfo === null) {
     throw "Error: cannot find the greeted account";
   }
-  const greeting = borsh.deserialize(
+  const greeting = deserialize(
     GreetingSchema,
     GreetingAccount,
     accountInfo.data,

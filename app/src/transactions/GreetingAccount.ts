@@ -1,7 +1,5 @@
-import {
-  PublicKey,
-} from "@solana/web3.js"
-import * as borsh from "borsh"
+import { PublicKey } from "@solana/web3.js"
+import { serialize } from "borsh"
 
 /**
  * The state of a greeting account managed by the hello world program
@@ -25,7 +23,7 @@ export const GreetingSchema = new Map([
 /**
  * The expected size of each greeting account.
  */
-export const GREETING_SIZE = borsh.serialize(
+export const GREETING_SIZE = serialize(
   GreetingSchema,
   new GreetingAccount(),
 ).length;

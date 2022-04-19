@@ -21,7 +21,6 @@ import { clusterApiUrl } from "@solana/web3.js";
 import "@solana/wallet-adapter-react-ui/styles.css";
 import { ControlPanel } from "./ControlPanel";
 import styles from "./App.module.scss"
-import "./global.css"
 
 export const App: FC = () => {
     // The network can be set to "devnet", "testnet", or "mainnet-beta".
