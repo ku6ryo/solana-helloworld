@@ -9,7 +9,10 @@ Integrated components / libraries
 - React to render UI
 - [Solana wallet adoptor](https://github.com/solana-labs/wallet-adapter/) to connect app to browser wallets.
 
-# Commands
+# Polyfilling Buffer
+borsh uses Buffer from Node.js so it needs to be polyfilled. I checked rollup plugins mentioned in [this article](https://stackoverflow.com/questions/69286329/polyfill-node-os-module-with-vite-rollup-js).
+
+# Solana commands
 
 ## Create a Solana wallet
 ```
